@@ -1,4 +1,5 @@
 ﻿using Tyuiu.TimoninIA.Sprint2.Task5.V14.Lib;
+
 namespace Tyuiu.TimoninIA.Sprint2.Task5.V14
 {
     internal class Program
@@ -7,26 +8,22 @@ namespace Tyuiu.TimoninIA.Sprint2.Task5.V14
         {
             DataService ds = new DataService();
 
-            Console.Write("Введите номер дня года (1 - 365): ");
-            int k = Convert.ToInt32(Console.ReadLine());
+            int x = Convert.ToInt32(Console.ReadLine());
+            int y = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Введите номер дня года (1 - 7): ");
-            int d = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+            Console.WriteLine("***************************************************************************");
 
-            string res;
-            if (k < 1 || k > 365)
-            {
-                Console.WriteLine("Некорректные входные данные.");
-            }
-            else
-            {
-                res = " день года является: " + ds.FindDayName(k, d);
-            }
+            Console.WriteLine("k = " + x);
+            Console.WriteLine("d = " + y);
 
-            int dayIndex = (d - 1 + (k - 1)) % 7;
+            Console.WriteLine("***************************************************************************");
+            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("***************************************************************************");
 
-            Console.WriteLine(dayIndex);
-
+            Console.WriteLine(ds.FindDayName(x, y));
+            Console.ReadKey();
         }
     }
 }

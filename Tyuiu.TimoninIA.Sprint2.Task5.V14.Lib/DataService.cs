@@ -1,43 +1,39 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint2;
+
 namespace Tyuiu.TimoninIA.Sprint2.Task5.V14.Lib
 {
     public class DataService : ISprint2Task5V14
     {
         public string FindDayName(int k, int d)
         {
-
-            string res;
-            switch (d)
+            string[] days = { "Понедельник", "Вторник", "Среда", "Четверг",
+                "Пятница", "Суббота", "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг",
+                "Пятница", "Суббота", "Воскресенье" };
+            string res = "";
+            switch (k % 7)
             {
                 case 1:
-                    res = "Понедельник";
+                    res = days[d - 1];
                     break;
                 case 2:
-                    res = "Вторемк";
+                    res = days[d];
                     break;
                 case 3:
-                    res = "Среда";
+                    res = days[d + 1];
                     break;
                 case 4:
-                    res = "Четверг";
+                    res = days[d + 2];
                     break;
                 case 5:
-                    res = "Пятница";
+                    res = days[d + 3];
                     break;
                 case 6:
-                    res = "Суббота";
+                    res = days[d + 4];
                     break;
-                case 7:
-                    res = "Воскресенье";
+                case 0:
+                    res = days[d + 5];
                     break;
-
-                default:
-                    throw new ArgumentException($"День недели должен быть от 1 до 7.Значение {d}");
             }
-
-
-            int dayIndex = (k - 1 + (d - 1)) % 7;
-
             return res;
         }
     }
