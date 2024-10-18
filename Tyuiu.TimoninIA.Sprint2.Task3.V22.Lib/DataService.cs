@@ -1,8 +1,5 @@
 ﻿using tyuiu.cources.programming.interfaces.Sprint2;
-
-
 namespace Tyuiu.TimoninIA.Sprint2.Task3.V22.Lib
-
 {
     public class DataService : ISprint2Task3V22
     {

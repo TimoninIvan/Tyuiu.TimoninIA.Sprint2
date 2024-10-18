@@ -1,5 +1,4 @@
 using Tyuiu.TimoninIA.Sprint2.Task3.V22.Lib;
-
 namespace Tyuiu.TimoninIA.Sprint2.Task3.V22.Test
 {
     [TestClass]
