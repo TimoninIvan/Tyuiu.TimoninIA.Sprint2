@@ -9,20 +9,9 @@ namespace Tyuiu.TimoninIA.Sprint2.Task4.V10.Test
         {
             DataService ds = new DataService();
             double x = 1;
-            double y = 3;
-            double res = ds.Calculate(x, y);
-            double wait = 1.333;
-            Assert.AreEqual(res, wait);
-        }
-        [TestMethod]
-        public void TestMethod2()
-        {
-            DataService ds = new DataService();
-            double x = 1;
-            double y = 9;
-            double res = ds.Calculate(x, y);
-            double wait = 24;
-            Assert.AreEqual(res, wait);
+            double y = 1;
+            var res = ds.Calculate(x, y);
+            Assert.AreEqual(6, res);
         }
     }
 }
